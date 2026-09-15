@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@UI.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sanmarino.smUiController">
+
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="false">
+         <image>
+            <Image url="@BRGY.png" /> </image>
+      </ImageView>
+
+      <Rectangle fill="#000000" height="1080.0" opacity="0.4" width="1920.0" />
+
+      <BorderPane>
+         <top>
+            <HBox alignment="CENTER" prefHeight="100.0" spacing="30.0" style="-fx-background-color: rgba(0,0,0,0.5); -fx-padding: 20 0;">
+               <children>
+
+                  <ImageView fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@LOGO.png" />
+                     </image>
+                  </ImageView>
+
+                  <Rectangle fill="#148C9E" height="100.0" width="3.0" />
+
+                  <Label text="BRGY. SAN MARINO" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="55.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="129.0" layoutY="200.0" spacing="10">
+                     <children>
+                        <VBox>
+                           <children>
+                              <Label fx:id="lblWelcome" text="WELCOME" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="110.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblUserDisplay" prefHeight="121.0" prefWidth="532.0" text="Here" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="72.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#148C9E" height="4.0" width="600.0" />
+                     </children>
+                  </VBox>
+
+                  <VBox layoutX="1300.0" layoutY="150.0" prefWidth="400.0" spacing="2.0">
+                     <children>
+
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#switchToAnnouncement" prefHeight="120.0" spacing="20.0" style="-fx-background-color: rgba(20, 140, 158, 0.9); -fx-cursor: hand; -fx-padding: 20;">
+                           <children>
+                              <Label style="-fx-font-size: 30;" text="📢" textFill="WHITE" />
+                              <Label onMouseEntered="#handleMouseEnter" onMouseExited="#handleMouseExit" style="-fx-font-size: 20; -fx-font-weight: bold;" text="ANNOUNCEMENTS" textFill="WHITE" />
+                           </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#switchToRecords" onMouseEntered="#handleMouseEnter" onMouseExited="#handleMouseExit" prefHeight="120.0" spacing="20.0" style="-fx-background-color: rgba(20, 140, 158, 0.9); -fx-cursor: hand; -fx-padding: 20;">
+                           <children>
+                              <Label style="-fx-font-size: 30;" text="💳" textFill="WHITE" />
+                              <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="TRANSACTIONS" textFill="WHITE" />
+                           </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#switchToAbout" onMouseEntered="#handleMouseEnter" onMouseExited="#handleMouseExit" prefHeight="120.0" spacing="20.0" style="-fx-background-color: rgba(20, 140, 158, 0.9); -fx-cursor: hand; -fx-padding: 20;">
+                           <children>
+                              <Label style="-fx-font-size: 30;" text="👥" textFill="WHITE" />
+                              <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="RESIDENTS" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="navProfile" alignment="CENTER_LEFT" layoutX="10.0" layoutY="254.0" onMouseClicked="#switchToPROFILE" onMouseEntered="#handleMouseEnter" onMouseExited="#handleMouseExit" prefHeight="120.0" spacing="20.0" style="-fx-background-color: rgba(20, 140, 158, 0.9); -fx-cursor: hand; -fx-padding: 20;">
+                           <children>
+                              <Label style="-fx-font-size: 30;" text="⚙" textFill="WHITE" />
+                              <Label onMouseClicked="#switchToPROFILE" onMouseEntered="#handleMouseEnter" onMouseExited="#handleMouseExit" style="-fx-font-size: 20; -fx-font-weight: bold;" text="PROFILE" textFill="WHITE" />
+                           </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#handleLogout" onMouseEntered="#handleMouseEnter" onMouseExited="#handleMouseExit" prefHeight="120.0" spacing="20.0" style="-fx-background-color: rgba(20, 140, 158, 0.9); -fx-cursor: hand; -fx-padding: 20;">
+                           <children>
+                              <Label style="-fx-font-size: 30;" text="⍈" textFill="WHITE" />
+                              <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="LOGOUT" textFill="WHITE" />
+                           </children>
+                        </HBox>
+
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

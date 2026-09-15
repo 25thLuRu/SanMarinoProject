@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="1080.0" prefWidth="1920.0" stylesheets="@UI.css"
+      xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.sanmarino.smUiController"
+      style="-fx-background-color:#f4f4f4;">
+
+   <HBox alignment="CENTER_LEFT" prefHeight="100.0" style="-fx-background-color:white; -fx-padding:15 25; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+      <children>
+
+         <HBox alignment="CENTER_LEFT" spacing="15">
+            <children>
+               <ImageView fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@LOGO.png" />
+                  </image>
+               </ImageView>
+               <Label text="Brgy. San Marino" style="-fx-font-size:26px; -fx-font-weight:bold;"/>
+            </children>
+         </HBox>
+
+         <Pane HBox.hgrow="ALWAYS" />
+
+         <HBox alignment="CENTER" spacing="50">
+            <children>
+               <Label text="ANNOUNCEMENT" onMouseClicked="#switchToAnnouncement"
+                      style="-fx-font-size:18px; -fx-cursor:hand; -fx-text-fill:#148C9E; -fx-font-weight:bold;"/>
+               <Label text="HOME" onMouseClicked="#switchToHOME"
+                      style="-fx-font-size:18px; -fx-cursor:hand;"/>
+               <Label text="TRANSACTION" onMouseClicked="#switchToRecords"
+                      style="-fx-font-size:18px; -fx-cursor:hand;"/>
+               <Label text="RESIDENTS" onMouseClicked="#switchToAbout"
+                      style="-fx-font-size:18px; -fx-cursor:hand;"/>
+            </children>
+         </HBox>
+
+         <Pane HBox.hgrow="ALWAYS" />
+      </children>
+   </HBox>
+
+   <VBox spacing="25" style="-fx-padding:40;" alignment="TOP_CENTER">
+      <children>
+
+         <HBox alignment="CENTER_LEFT">
+            <Label text="Barangay Announcement"
+                   style="-fx-background-color:#148C9E;
+                           -fx-text-fill:white;
+                           -fx-font-size:22px;
+                           -fx-font-weight:bold;
+                           -fx-padding:10 40;
+                           -fx-background-radius:25;"/>
+         </HBox>
+
+         <VBox alignment="CENTER" spacing="20"
+               style="-fx-background-color: white; -fx-padding: 30; -fx-background-radius: 15; -fx-border-color: #ddd; -fx-border-radius: 15;">
+            <children>
+               <Label text="Create New Post" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333;"/>
+               <HBox alignment="CENTER" spacing="15">
+                  <children>
+                     <TextField fx:id="announcementInput" prefHeight="45.0" prefWidth="700.0"
+                                promptText="Enter new meeting or event details here..."
+                                style="-fx-background-radius: 20; -fx-padding: 10 20; -fx-border-color: #ddd; -fx-border-radius: 20;"/>
+                     <Button mnemonicParsing="false" onAction="#handlePostAnnouncement"
+                             prefHeight="45.0" prefWidth="140.0"
+                             style="-fx-background-color: #148C9E; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand;"
+                             text="POST" />
+                  </children>
+               </HBox>
+            </children>
+            <VBox.margin>
+               <Insets left="100.0" right="100.0" />
+            </VBox.margin>
+         </VBox>
+
+         <ScrollPane fitToWidth="true" prefHeight="600.0" VBox.vgrow="ALWAYS"
+                     style="-fx-background-color: transparent; -fx-background: transparent; -fx-padding: 10;">
+            <content>
+               <VBox fx:id="announcementContainer" alignment="TOP_CENTER" spacing="15.0">
+               </VBox>
+            </content>
+         </ScrollPane>
+
+      </children>
+   </VBox>
+</VBox>

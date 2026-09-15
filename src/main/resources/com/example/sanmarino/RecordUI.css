@@ -1,0 +1,28 @@
+
+.text-buttonRECORD {
+    -fx-font-size: 100;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+.text-buttonRECORD:hover {
+    -fx-text-fill: WHITE;
+    -fx-underline: true;
+}
+
+#addButton{
+    -fx-background-color: #7188f4;
+    -fx-background-radius:50;
+}
+#addButton:hover{
+    -fx-background-color: #6b81ec;
+}
+
+#deleteButton{
+    -fx-background-color: #ff3131;
+    -fx-background-radius:50;
+}
+
+#deleteButton:hover{
+    -fx-background-color: #d32d2d;
+}

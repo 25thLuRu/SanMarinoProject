@@ -1,0 +1,75 @@
+.root {
+    -fx-accent: #148C9E;
+}
+
+#topGridPane {
+    -fx-border-radius: 5px;
+}
+
+#TPAnchorPane {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+}
+
+.text-button {
+    -fx-font-size: 24px;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.text-button:hover {
+    -fx-text-fill: #148C9E;
+    -fx-underline: true;
+}
+
+.announcement-div {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 4);
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+}
+
+.announcement-text {
+    -fx-font-size: 16px;
+    -fx-text-fill: #000000;
+}
+
+
+.text-field, #announcementInput {
+    -fx-font-size: 14px;
+    -fx-background-radius: 20;
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 20;
+}
+
+
+.text-field:focused, #announcementInput:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: #148C9E;
+}
+
+.button, #postButton {
+    -fx-background-color: #148C9E;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.button:hover, #postButton:hover {
+    -fx-background-color: #0e6b7a;
+}
+
+
+.sidebar-announcement {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-padding: 15px;
+    -fx-border-color: #148C9E;
+    -fx-border-width: 0 0 0 5px;
+}
+

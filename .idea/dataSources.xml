@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="User Data Source" uuid="2517d0da-49ca-472d-aa3d-1830269f7889">
+      <driver-ref>java.sql.Driver</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>net.ucanaccess.jdbc.UcanaccessDriver</jdbc-driver>
+      <jdbc-url>jdbc:ucanaccess://$PROJECT_DIR$/../../Javafd-2.0-main/SANMARINO/BarangayDB/SanMarinoDB.accdb</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>
